@@ -16,11 +16,11 @@
 <body>
     <header class="header">
         <div class="logo">
-            <i class="icofont-travelling ml-3 mr-2"></i>
+            <i class="icofont-travelling ms-3 me-2"></i>
             <span class="font-weight-light"> In </span>
             <span class="font-weight-bold mx-1">N' </span>
             <span class="font-weight-light">Out </span>
-            <i class="icofont-runner-alt-1 ml-2"></i>
+            <i class="icofont-runner-alt-1 ms-2"></i>
         </div>
         <div class="menu-toggle-c ml-1">
             <img src="https://img.icons8.com/windows/32/000000/tasks.png"/>
@@ -31,7 +31,7 @@
             <div class="dropdown-button">
                 <img class="avatar"
                     src="<?= "https://images.uncyc.org/pt/thumb/2/29/Mr-bean-avatar.jpg/250px-Mr-bean-avatar.jpg" .md5(strtolower(trim($_SESSION['user']->email))) ?>" alt="user">
-                <span class="ml-3">
+                <span class="ms-3">
                     <?= $_SESSION['user'] ->name ?>
                 </span>
                 <i class="icofont-simple-down mx-2"></i>
