@@ -10,7 +10,7 @@
         <form action="#" method="post" class="mb-4">
             <div class="input-group">
                 <?php if($user->is_admin) { ?>
-                <select name="user" class="form-control mb-1 mr-2" placeholder="Selecione o usuário..">
+                <select name="user" class="form-control mb-1 me-2" placeholder="Selecione o usuário..">
                     <option value="">Selecione o Usuário</option>
                     <?php
                         foreach($users as $user) {
@@ -20,7 +20,7 @@
                         ?>
                 </select>
                 <?php } ?>
-                <select name="period" class="form-control mr-1" placeholder="Selecione o período..">
+                <select name="period" class="form-control mb-1 me-2" placeholder="Selecione o período..">
                     <?php
                         foreach($periods as $key => $month) {
                             $selected = $key === $selectedPeriod ? 'selected' : '';
