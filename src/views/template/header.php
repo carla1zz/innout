@@ -16,11 +16,11 @@
 <body>
     <header class="header">
         <div class="logo">
-            <i class="icofont-travelling ms-3 me-2"></i>
+            <i class="icofont-travelling mx-3"></i>
             <span class="font-weight-light"> In </span>
             <span class="font-weight-bold mx-1">N' </span>
             <span class="font-weight-light">Out </span>
-            <i class="icofont-runner-alt-1 ms-2"></i>
+            <i class="icofont-runner-alt-1 mx-3 "></i>
         </div>
         <div class="menu-toggle-c ml-1">
             <img src="https://img.icons8.com/windows/32/000000/tasks.png"/>
@@ -39,7 +39,7 @@
                     <ul class="nav-list">
                         <li class="nav-item">
                             <a href="logout.php">
-                                <i class="icofont-logout mr-2 ml-1"></i>
+                                <i class="icofont-logout me-2 ms-1"></i>
                                 Sair
                             </a>
                         </li>

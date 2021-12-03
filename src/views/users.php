@@ -30,7 +30,7 @@
                         <a href="save_user.php?update=<?= $user->id ?>" class="btn btn-warning btn-sm rounded-circle me-1">
                             <i class="icofont-edit"></i>
                         </a>
-                        <a href="?delete=<?= $user->id ?>" class="btn btn-danger btn-sm rounded-circle ms-1">
+                        <a href="?delete=<?= $user->id ?>" data-confirm class="btn btn-danger btn-sm rounded-circle ms-1">
                             <i class="icofont-trash"></i>
                         </a>
                     </td>

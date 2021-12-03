@@ -1,6 +1,24 @@
 <?php
 session_start();
-requireValidSession();
+requireValidSession(true);
+
+$exception = null;
+if(isset($_GET['delete'])) {
+    if($_GET['delete'] == $_SESSION['id']){
+        // throw new Exception('Não é possível excluir o usuário atual, faça login como outro admin para excluí-lo');
+
+    }
+    try {
+        User::deleteById($_GET['delete']);
+        addSuccessMsg('Usuário excluído com sucesso!');
+    } catch (Exception $e) {
+        if(stripos($e->getMessage(), 'FOREIGN KEY')){
+            addErrorMsg('Não é possível excluir o usuário com registro de pontos');
+        } else {
+            $exception = $e;
+        }
+    }
+}
 
 $users = User::get();
 foreach($users as $user) {
@@ -10,4 +28,7 @@ foreach($users as $user) {
     }
 }
 
-loadTemplateView('users', ['users' => $users]);
+loadTemplateView('users', [
+    'users' => $users, 
+    'exception' => $exception
+]);

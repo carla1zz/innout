@@ -39,6 +39,7 @@ function activateClock() {
 
 activateClock()
 
+
 const $html = document.querySelector('html')
 const $checkbox = document.querySelector('#switch')
 const darkTableText = document.querySelector('.table.table-striped.table-hover')
@@ -50,7 +51,19 @@ if(localStorage.getItem('dark') == 'true'){
     } catch {}
     $checkbox.checked = true
 
-} 
+}
+ 
+(function () {
+    const confirmDelete = document.querySelectorAll('a[data-confirm]')
+    confirmDelete.forEach((element, index) => {
+        element.onclick = function(e) {
+            let button = confirm('Deletar usuário? Essa ação não poderá ser desfeita!');
+            if(button == false) {
+                return false
+            }
+        }
+    })
+})()
 
 $checkbox.addEventListener('change', function() {
     $html.classList.toggle('dark-mode')
